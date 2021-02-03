@@ -18,12 +18,13 @@ function Pokedex() {
       <Pokecards
         name={pokemon.name}
         type={pokemon.type}
+        id={pokemon.id}
         experience={pokemon.base_experience}
       />
     );
   }
 
-  return <div>{pokemons.map(createCard)}</div>;
+  return <div className="pokedex">{pokemons.map(createCard)}</div>;
 }
 
 export default Pokedex;

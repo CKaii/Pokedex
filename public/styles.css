@@ -3,3 +3,31 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.container {
+  text-align: center;
+}
+
+.pokeCard {
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  background-color: lightgray;
+  margin: 30px auto;
+  width: 15rem;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.pokeCard h1 {
+  color: blue;
+  font-size: 1.5rem;
+}
+
+.pokeCard h2 {
+  font-size: 1rem;
+}
+
+.pokedex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
