@@ -2,7 +2,7 @@ import React from 'react';
 import Pokecards from './Pokecards';
 
 function Pokedex() {
-  const pokemon = [
+  const pokemons = [
     { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
     { id: 7, name: 'Squirtle', type: 'water', base_experience: 63 },
     { id: 11, name: 'Metapod', type: 'bug', base_experience: 72 },
@@ -13,16 +13,17 @@ function Pokedex() {
     { id: 133, name: 'Eevee', type: 'normal', base_experience: 65 },
   ];
 
-  return (
-    <div>
-      <h1>Pokedex</h1>
+  function createCard(pokemon) {
+    return (
       <Pokecards
-        name={pokemon[0].name}
-        type={pokemon[0].type}
-        experience={pokemon[0].base_experience}
+        name={pokemon.name}
+        type={pokemon.type}
+        experience={pokemon.base_experience}
       />
-    </div>
-  );
+    );
+  }
+
+  return <div>{pokemons.map(createCard)}</div>;
 }
 
 export default Pokedex;
